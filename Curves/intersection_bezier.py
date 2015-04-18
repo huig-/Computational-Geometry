@@ -43,7 +43,7 @@ class IntersectionBezier:
         else:
             return self._intersect_segments(P[0,:], P[-1,:], Q[0,:], Q[-1,:])
 
-	# Returns the minimum area rectangle containing the control points P
+    # Returns the minimum area rectangle containing the control points P
     def _box(self, P):
         return np.amin(P, axis=0), np.amax(P, axis=0)
 
@@ -57,7 +57,7 @@ class IntersectionBezier:
             return True
         return False
 
-	# Tests if the boxes associated with P and Q intersect
+    # Tests if the boxes associated with P and Q intersect
     def _intersect_P_Q(self, P, Q):
         return self._intersect_boxes(self._box(P),self. _box(Q))
 
